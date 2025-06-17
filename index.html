@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabanoss Catcher</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Правила -->
+  <div id="rulesSection" class="section">
+    <h2>📜 Spēles noteikumi</h2>
+    <p>
+      🟫 Noķeriet brūnos kabanosus!<br>
+      🟩 Zaļie brokoļi = mīnuss dzīve!<br>
+      ❌ Ja palaid garām kabanosu — arī zaudē dzīvi!<br>
+      🎮 Vadi ar bultām vai pieskārieniem.
+    </p>
+    <button id="rulesNextBtn">Turpināt</button>
+  </div>
+
+  <!-- Имя -->
+  <div id="nameInputSection" class="section" style="display:none;">
+    <h2>Ievadi savu vārdu</h2>
+    <input type="text" id="playerName" placeholder="Tavs vārds" />
+    <button id="confirmNameBtn">Labi</button>
+  </div>
+
+  <!-- Игровой экран -->
+  <div id="gameScreen" class="section" style="display:none;">
+    <h1>Kabanoss Catcher</h1>
+    <div id="game">
+      <div id="player"></div>
+    </div>
+    <div class="hud">
+      <p>Punkti: <span id="score">0</span></p>
+      <p>Dzīvības: <span id="lives">3</span></p>
+    </div>
+    <button id="startGameBtn" style="display:none;">Sākt spēli</button>
+  </div>
+
+  <!-- Окно окончания игры -->
+  <div id="gameOverModal" class="modal">
+    <div class="modal-content">
+      <h2>Jūs zaudējāt, <span id="finalPlayerName"></span>!</h2>
+      <p>Jūsu rezultāts: <span id="finalScore"></span></p>
+      <button id="restartGameBtn">Sākt no jauna</button>
+      <button id="showLeaderboardBtn">Skatīt tabulu</button>
+    </div>
+  </div>
+
+  <!-- Таблица лидеров -->
+  <div id="leaderboardModal" class="modal">
+    <div class="modal-content">
+      <span id="closeLeaderboard" class="close">&times;</span>
+      <h2>Labāko spēlētāju tabula</h2>
+      <ul id="leaderboardList"></ul>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
