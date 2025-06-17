@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kabanos Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="rulesSection">
+    <h1>📜 Spēles noteikumi</h1>
+    <p>💡 Savāc brūnos kabanošus, lai iegūtu punktus.</p>
+    <p>🥦 Izvairies no zaļajiem brokoļiem, tie atņem dzīvības.</p>
+    <p>💔 Ja paliek 0 dzīvību — spēle beidzas!</p>
+    <button id="rulesNextBtn">Tālāk</button>
+  </section>
+
+  <section id="nameInputSection" style="display:none;">
+    <h1>👤 Ievadi savu vārdu</h1>
+    <input type="text" id="playerName" placeholder="Tavs vārds" />
+    <button id="confirmNameBtn">Apstiprināt</button>
+  </section>
+
+  <section id="gameScreen" style="display:none;">
+    <div class="hud">
+      <span>💯 Punkti: <span id="score">0</span></span>
+      <span>❤️ Dzīvības: <span id="lives">3</span></span>
+    </div>
+    <div id="game">
+      <div id="player"></div>
+    </div>
+    <button id="startGameBtn">Sākt spēli</button>
+  </section>
+
+  <div id="gameOverModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h2>☠️ Spēle beigusies</h2>
+      <p><strong id="finalPlayerName"></strong>, tavi punkti: <strong id="finalScore"></strong></p>
+      <button id="restartGameBtn">Sākt no jauna</button>
+      <button id="showLeaderboardBtn">🏆 Skatīt rezultātus</button>
+    </div>
+  </div>
+
+  <div id="leaderboardModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="closeLeaderboard">&times;</span>
+      <h2>🏆 Līderu saraksts</h2>
+      <ul id="leaderboardList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
